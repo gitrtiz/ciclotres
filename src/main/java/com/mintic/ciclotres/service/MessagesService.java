@@ -34,4 +34,26 @@ public class MessagesService {
             }
         }
     }
+    
+    public Messages update(Messages messages){
+        if (messages.getIdMessage()!=null){
+            Optional<Messages> msg = messagesRepository.getMessages(messages.getIdMessage());
+            if (!msg.isEmpty()) {
+                if (messages.getMessageText()!=null) {
+                    msg.get().setMessageText(messages.getMessageText());
+                }
+                return messagesRepository.save(msg.get());
+            }
+        }
+        return messages;
+    }
+    
+    public boolean delete(int id) {
+        Optional<Messages> msg = getMessages(id);
+        if (!msg.isEmpty()) {
+            messagesRepository.delete(msg.get());
+            return true;
+        }
+        return false;
+    }
 }

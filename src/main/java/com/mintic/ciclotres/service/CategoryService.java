@@ -16,9 +16,13 @@ public class CategoryService {
     @Autowired
     CategoryRepository categoryRepository;
     
-    public List<Category> getAll() {return (List<Category>) categoryRepository.getAll();};
+    public List<Category> getAll() {
+        return (List<Category>) categoryRepository.getAll();
+    };
     
-    public Optional<Category> getCategory(int id) {return categoryRepository.getCategory(id);};
+    public Optional<Category> getCategory(int id) {
+        return categoryRepository.getCategory(id);
+    };
     
     public Category save(Category category) {
         if (category.getId()==null) {
@@ -35,4 +39,29 @@ public class CategoryService {
         }
     }
     
+    public Category update(Category category){
+        if (category.getId()!=null){
+            Optional<Category> g = categoryRepository.getCategory(category.getId());
+            if (!g.isEmpty()) {
+                if (category.getDescription()!=null) {
+                    g.get().setDescription(category.getDescription());
+                }
+                if (category.getName()!=null) {
+                    g.get().setName(category.getName());
+                }
+                return categoryRepository.save(g.get());
+            }
+        }
+        return category;
+    }
+    
+    public boolean delete(int id) {
+        Optional<Category> c = getCategory(id);
+        if (!c.isEmpty()) {
+            categoryRepository.delete(c.get());
+            return true;
+        }
+        return false;
+    }
 }
+

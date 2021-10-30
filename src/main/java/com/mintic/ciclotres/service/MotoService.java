@@ -34,4 +34,36 @@ public class MotoService {
             }
         }
     }
+    
+    public Moto update(Moto moto){
+        if (moto.getId()!=null){
+            Optional<Moto> mt = motoRepository.getMoto(moto.getId());
+            if (!mt.isEmpty()) {
+                if (moto.getName()!=null) {
+                    mt.get().setName(moto.getName());
+                }
+                if (moto.getBrand()!=null) {
+                    mt.get().setBrand(moto.getBrand());
+                }
+                if (moto.getYear()!=null) {
+                    mt.get().setYear(moto.getYear());
+                }
+                if (moto.getDescription()!=null) {
+                    mt.get().setDescription(moto.getDescription());
+                }
+                                
+                return motoRepository.save(mt.get());
+            }
+        }
+        return moto;
+    }
+    
+    public boolean delete(int id) {
+        Optional<Moto> mt = getMoto(id);
+        if (!mt.isEmpty()) {
+            motoRepository.delete(mt.get());
+            return true;
+        }
+        return false;
+    }
 }

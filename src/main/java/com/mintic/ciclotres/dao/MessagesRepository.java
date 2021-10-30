@@ -17,9 +17,20 @@ public class MessagesRepository {
     @Autowired
     private MessagesCrud messagesCrudRepository;
     
-    public List<Messages> getAll() {return (List<Messages>) messagesCrudRepository.findAll();};
+    public List<Messages> getAll() {
+        return (List<Messages>) messagesCrudRepository.findAll();
+    };
     
-    public Optional<Messages> getMessages(int id) {return messagesCrudRepository.findById(id);};
+    public Optional<Messages> getMessages(int id) {
+        return messagesCrudRepository.findById(id);
+    };
     
-    public Messages save(Messages messages) {return messagesCrudRepository.save(messages);};
+    public Messages save(Messages messages) {
+        return messagesCrudRepository.save(messages);
+    };
+    
+    public void delete(Messages messages){
+        messagesCrudRepository.delete(messages);
+    };
+    
 }

@@ -1,5 +1,6 @@
 com\mintic\ciclotres\service\ClientController.class
 com\mintic\ciclotres\CiclotresApplication.class
+com\mintic\ciclotres\service\UserController.class
 com\mintic\ciclotres\entities\Moto.class
 com\mintic\ciclotres\entities\Category.class
 com\mintic\ciclotres\service\MessagesService.class
@@ -11,14 +12,18 @@ com\mintic\ciclotres\service\ReservationContoller.class
 com\mintic\ciclotres\entities\MessagesCrud.class
 com\mintic\ciclotres\entities\Reservation.class
 com\mintic\ciclotres\dao\ReservationRepository.class
+com\mintic\ciclotres\entities\User.class
 com\mintic\ciclotres\service\MotoService.class
+com\mintic\ciclotres\service\UserService.class
 com\mintic\ciclotres\service\MessagesController.class
+com\mintic\ciclotres\entities\UserCrud.class
 com\mintic\ciclotres\entities\CategoryCrud.class
 com\mintic\ciclotres\entities\Messages.class
 com\mintic\ciclotres\entities\Client.class
 com\mintic\ciclotres\service\CategoryService.class
 com\mintic\ciclotres\dao\CategoryRepository.class
 com\mintic\ciclotres\dao\MotoRepository.class
+com\mintic\ciclotres\dao\UserRepository.class
 com\mintic\ciclotres\service\ReservationService.class
 com\mintic\ciclotres\service\ClientService.class
 com\mintic\ciclotres\entities\ReservationCrud.class
