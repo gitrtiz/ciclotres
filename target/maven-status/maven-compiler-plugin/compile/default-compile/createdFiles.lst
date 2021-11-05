@@ -2,7 +2,9 @@ com\mintic\ciclotres\service\ClientController.class
 com\mintic\ciclotres\CiclotresApplication.class
 com\mintic\ciclotres\service\UserController.class
 com\mintic\ciclotres\entities\Moto.class
+com\mintic\ciclotres\report\StatusReservas.class
 com\mintic\ciclotres\entities\Category.class
+com\mintic\ciclotres\report\ClientCont.class
 com\mintic\ciclotres\service\MessagesService.class
 com\mintic\ciclotres\dao\MessagesRepository.class
 com\mintic\ciclotres\entities\ClientCrud.class

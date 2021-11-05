@@ -7,12 +7,14 @@ C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\service\CategorySer
 C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\entities\ReservationCrud.java
 C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\entities\Reservation.java
 C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\entities\User.java
+C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\report\ClientCont.java
 C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\dao\MotoRepository.java
 C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\entities\Client.java
 C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\dao\CategoryRepository.java
 C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\entities\Category.java
 C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\entities\ClientCrud.java
 C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\entities\UserCrud.java
+C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\report\StatusReservas.java
 C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\CiclotresApplication.java
 C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\service\MessagesController.java
 C:\JavaProjects\ciclotres\src\main\java\com\mintic\ciclotres\service\CategoryController.java
