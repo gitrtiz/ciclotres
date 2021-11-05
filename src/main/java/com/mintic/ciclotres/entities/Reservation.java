@@ -3,6 +3,7 @@ package com.mintic.ciclotres.entities;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import java.util.Calendar;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,11 +28,11 @@ public class Reservation implements Serializable{
     @Column(name = "startDate", updatable = false, nullable = false)
     @Temporal(TemporalType.DATE)
     //@Temporal(javax.persistence.TemporalType.DATE)
-    private Calendar startDate;
+    private Date startDate;
     @Column(name = "devolutionDate", updatable = false, nullable = false)
     @Temporal(TemporalType.DATE)
     //@Temporal(javax.persistence.TemporalType.DATE)
-    private Calendar devolutionDate;
+    private Date devolutionDate;
     //@Column(name="status", nullable = false, length = 8 )
     //@Enumerated(value = EnumType.STRING)
     private String status;
@@ -56,19 +57,19 @@ public class Reservation implements Serializable{
         this.idReservation = idReservation;
     }
 
-    public Calendar getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Calendar startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public Calendar getDevolutionDate() {
+    public Date getDevolutionDate() {
         return devolutionDate;
     }
 
-    public void setDevolutionDate(Calendar devolutionDate) {
+    public void setDevolutionDate(Date devolutionDate) {
         this.devolutionDate = devolutionDate;
     }
 
