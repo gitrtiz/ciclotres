@@ -1,6 +1,8 @@
 package com.mintic.ciclotres.service;
 
 import com.mintic.ciclotres.entities.Reservation;
+import com.mintic.ciclotres.report.ClientCont;
+import com.mintic.ciclotres.report.StatusReservas;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,5 +52,20 @@ public class ReservationContoller {
     public boolean delete(@PathVariable("id") int reservationId) {
         return reservationService.delete(reservationId);
     }
+    
+    @GetMapping("/report-status")
+    public StatusReservas getReservas(){
+        return reservationService.reporteStatusServicio();
+    }
+    
+    @GetMapping("/report-dates/{dateOne}/{dateTwo}")
+     public List<Reservation> getReservasTiempo (@PathVariable("dateOne")String dateOne, @PathVariable("dateTwo")String dateTwo ){
+         return reservationService.reporteTiempoServicio(dateOne, dateTwo);
+     }
+     
+     @GetMapping("/report-clients")
+     public List<ClientCont> getClientes(){
+         return reservationService.reporteClientesServicio();
+     }
     
 }
